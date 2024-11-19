@@ -1,0 +1,341 @@
+/* all pages */
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #202020;
+  /* --navbar-color: rgba(65, 49, 65, 0.7); */
+  --navbar-color: rgba(49, 63, 55, 0.7);
+  --text-color: rgb(208, 190, 166);
+  --header-color: antiquewhite;
+  font-family: "Nunito", "Verdana";
+}
+
+main {
+  margin-top: 100px;
+  max-width: 1500px;
+  margin-bottom: 100px;
+}
+
+p {
+  color: var(--text-color);
+  padding-left: 30px;
+  padding-right: 30px;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  color: var(--header-color);
+  font-weight: 100;
+  padding: 10px 20px;
+}
+
+h1 {
+  font-size: 25pt;
+}
+
+h2 {
+  font-size: 30pt;
+}
+
+h3 {
+  font-size: 20pt;
+}
+
+h4 {
+  color: burlywood;
+  font-size: 15pt;
+  font-style: italic;
+}
+
+ul, ol {
+  line-height: 1.5;
+  padding-left: 50px;
+  color: var(--text-color);
+}
+
+img {
+  border-radius: 1%;
+}
+
+
+/* links */
+
+a:link {
+  color: var(--text-color);
+}
+
+a:visited {
+  color: goldenrod;
+}
+
+a:hover {
+  color: var(--header-color);
+}
+
+a:active {
+  color: gold;
+}
+
+/* navbar links */
+a:link.navbar {
+  text-decoration: none;
+  color: var(--header-color);
+}
+
+a:visited.navbar {
+  text-decoration: none;
+  color: var(--header-color);
+}
+
+a:hover.navbar {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:active.navbar {
+  text-decoration: none;
+  color: gold;
+}
+
+
+/* nav */
+
+nav {
+  background-color: var(--navbar-color);
+  backdrop-filter: blur(6px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  border-bottom-left-radius: 20px;
+}
+
+nav * {
+  background-color: var(--navbar-color);
+  backdrop-filter: blur(2px);
+}
+
+nav ul {
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  border-bottom: 2px solid rgba(115, 115, 115, 0.297);
+  border-bottom-left-radius: 20px;
+}
+
+nav ul li {
+  padding: 5px 20px;
+  display: inline-block;
+  box-sizing: border-box;
+  border-bottom-left-radius: 20px;
+}
+
+/* fancy underlines in navbar. Uses pseudo-elements.
+/ See https://stackoverflow.com/questions/30352431/css-transition-not-working-with-underline */
+
+
+.fancy-underline {
+  display: inline-block;
+}
+
+.fancy-underline::after {
+  content: '';
+  width: 0%;
+  height: 1px;
+  margin: 0 auto;
+  display: block;
+  background: var(--header-color);
+  transition: 200ms;
+}
+
+.fancy-underline:hover::after {
+  width: 100%;
+  text-align: center;
+}
+
+
+/* Home page */
+
+#home-container p {
+  width: 50%;
+}
+
+.img-home {
+  margin: 25px;
+  width: 35%;
+  float: right;
+}
+
+
+/* Research page */
+
+#img-research {
+  float: right;
+  margin: 50px;
+  min-width: 300px;
+  width: 40%;
+}
+
+#research-container p {
+  width: 90%;
+}
+
+#research-container li {
+  width: 60%;
+}
+
+/* Teaching & Outreach page */
+
+#teaching-container {
+  max-width: 1000px;
+}
+
+#teaching-container p {
+  width: 90%;
+}
+
+#teaching-container li {
+  width: 90%;
+}
+
+.img-outreach {
+  float: center;
+  margin: 25px;
+  min-width: 500px;
+  width: 1500px;
+  overflow: scroll;
+}
+
+/* Logsem page */
+
+table {
+  margin: 10px 50px;
+  border: 1px solid;
+  border-collapse: collapse;
+  border-radius: 1%;
+}
+
+th, td {
+  color: var(--header-color);
+  border: 1px solid var(--header-color);
+  padding: 10px;
+  background-color: var(--navbar-color);
+}
+
+td em {
+  background-color: transparent;
+}
+
+/* Movie night page */
+
+#movienight-container p {
+  max-width: 50%;
+}
+
+.season {
+  display: flex;
+}
+
+.theme {
+  flex: 0 0 350px;
+}
+
+
+.season-name {
+  position: sticky;
+  z-index: 8;
+  top: 100px;
+}
+
+.theme-name {
+  position: sticky;
+  z-index: 3;
+  top: 150px;
+}
+
+#movie-list {
+  width: 1500px;
+}
+
+.movie-chunk-unthemed {
+  position: relative;
+  z-index: 7;
+  flex: 0 0 320px;
+}
+
+.in-themed {
+  padding-top: 50px;
+  margin-left: 30px;
+}
+
+.img-movienight {
+  position: relative;
+  margin: 25px;
+  width: 70%;
+  z-index: 9;
+}
+
+/* Milestone page */
+
+#milestone {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+#milestoneContainer {
+  position:absolute;
+  margin: 1% 2%;
+  border: 5px solid black;
+  border-radius: 15px;
+  max-width: 94%;
+  width: 500px;
+  aspect-ratio: 500 / 1000;
+}
+
+/* Responsiveness */
+
+@media only screen and (max-width: 810px) {
+  main {
+    margin-top: 135px;
+  }
+  
+  .img-home {
+    width: 65%;
+    max-width: 400px;
+    float: none;
+  }
+
+  #home-container p {
+    width: 80%;
+  }
+
+}
+
+@media only screen and (max-width: 1200px) {
+  .img-research {
+    float:none;
+    margin: 25px;
+    width: 70%;
+  }
+
+  #research-container p {
+    width: 70%;
+  }
+
+  .img-movienight {
+    float: none;
+    width: 70%;
+  }
+}
+
+
+
+
+
+
+
+
